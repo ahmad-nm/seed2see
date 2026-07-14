@@ -77,7 +77,7 @@ This workflow was specifically designed to match the client's business process, 
 ## 📸 Screenshots
 
 ## Home Page
-<img src="./screenshots/seed2see.com_.webp" width="300">
+<img src="./screenshots/seed2see.com_1.webp" width="300">
 
 ## Products Page
 <img src="./screenshots/seed2see.com_products.webp" width="300">
@@ -86,13 +86,13 @@ This workflow was specifically designed to match the client's business process, 
 <img src="./screenshots/seed2see.com_about.webp" width="300">
 
 ## Contact Page
-<img src="./screenshots/seed2see.com_contcat.webp" width="300">
+<img src="./screenshots/seed2see.com_contact.webp" width="300">
 
 ## Login Page
 <img src="./screenshots/seed2see.com_login.webp" width="300">
 
 ## Register Page
-<img src="./screenshots/seed2see.com_login(1).webp" width="300">
+<img src="./screenshots/seed2see.com_login (1).webp" width="300">
 
 ---
 
