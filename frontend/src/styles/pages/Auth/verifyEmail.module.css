@@ -1,0 +1,71 @@
+.verifyEmailContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.verifyEmailCard {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.verifyEmailTitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.verifyEmailTitle::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: var(--accent);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.verifyEmailMessage {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-bottom: 30px;
+}
+
+.successMessage {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.resendButton {
+    padding: 15px 40px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease, background 0.3s ease;
+}
+
+.resendButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resendButton:disabled {
+    background: var(--accent-light);
+    cursor: not-allowed;
+    opacity: 0.6;
+}

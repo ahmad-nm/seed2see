@@ -1,0 +1,202 @@
+.checkoutContainer {
+    background: #f9faf8;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.emptyCartMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.emptyCartMessage p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-top: 50px;
+}
+
+.backToProductsButton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.backToProductsButton:hover {
+    background: var(--soft);
+}
+
+.checkoutGrid {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+/* cards */
+
+.formCard,
+.summaryCard {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+}
+
+.formCard h2,
+.summaryCard h2 {
+    color: var(--text-h);
+    margin-bottom: 25px;
+}
+
+/* form */
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.field label {
+    margin-bottom: 8px;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.field input,
+.field textarea {
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(104,133,87,.15);
+}
+
+/* products */
+
+.products {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.product img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.productInfo {
+    flex: 1;
+}
+
+.productInfo h4 {
+    color: var(--text-h);
+    margin-bottom: 5px;
+}
+
+.productInfo p {
+    color: var(--text);
+}
+
+.price {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* totals */
+
+.totals {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+}
+
+.totals div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid var(--border);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-h);
+}
+
+/* button */
+
+.orderButton {
+    width: 100%;
+    margin-top: 25px;
+    padding: 18px;
+    border: none;
+    border-radius: 14px;
+    background: var(--success);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.orderButton:hover {
+    transform: translateY(-2px);
+    background: var(--primary);
+}
+
+/* sticky invoice */
+
+.summaryCard {
+    position: sticky;
+    top: 30px;
+    height: fit-content;
+}
+
+/* mobile */
+
+@media (max-width: 900px) {
+    .checkoutContainer {
+        padding: 20px;
+    }
+
+    .checkoutGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .summaryCard {
+        position: static;
+    }
+}

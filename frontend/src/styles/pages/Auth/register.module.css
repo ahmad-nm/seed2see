@@ -1,0 +1,65 @@
+.registerFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 60px;
+    gap: 30px;
+}
+
+.registerFormTitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.registerFormInput {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.registerFormInput:focus {
+    box-shadow: 0 0 0 3px rgba(104, 133, 87, 0.2);
+    border-color: var(--accent);
+}
+
+.registerFormButton {
+    width: fit-content;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease, color 0.3s ease;
+}
+
+.registerFormButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.registerFormError {
+    color: var(--error);
+    font-size: 1rem;
+    text-align: center;
+}

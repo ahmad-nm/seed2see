@@ -1,0 +1,148 @@
+.contactMessagesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ===== TITLE ===== */
+.contactMessagesTitle {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--primary);
+    margin: 0 20px 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.contactMessagesTitle::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100px;
+    height: 4px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+/* ===== TABLE WRAPPER (same as users) ===== */
+.tableContainer {
+    overflow-x: auto;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+/* ===== TABLE ===== */
+.contactMessagesTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* HEADER */
+.contactMessagesTable th {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+    font-weight: 600;
+    color: var(--text-h);
+    background: #fafafa;
+}
+
+/* CELLS */
+.contactMessagesTable td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+}
+
+/* ROW HOVER */
+.contactMessagesTable tbody tr:hover {
+    background: rgba(0, 0, 0, 0.02);
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+/* ===== READ / UNREAD STATES ===== */
+.read {
+    opacity: 0.35;
+}
+
+.unread {
+    background: rgba(104, 133, 87, 0.05);
+    font-weight: 500;
+}
+
+/* ===== ACTIONS COLUMN ===== */
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/* BUTTON BASE */
+.actionButton {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+/* READ / UNREAD TOGGLE */
+.readButton {
+    background: var(--primary);
+    color: white;
+}
+
+.readButton:hover {
+    background: var(--secondary);
+}
+
+/* DELETE */
+.deleteButton {
+    background: var(--error);
+    color: white;
+}
+
+.deleteButton:hover {
+    background: rgb(255, 144, 144);
+}
+
+/* OPTIONAL: EMAIL / SUBJECT STYLE */
+.email {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.subject {
+    font-weight: 600;
+    color: var(--text-h);
+}
+
+.unread {
+    background: linear-gradient(
+        90deg,
+        rgba(104, 133, 87, 0.08),
+        transparent
+    );
+    border-left: 4px solid var(--primary);
+}
+
+.subject {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.messagePreview {
+    max-width: 300px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

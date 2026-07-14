@@ -1,0 +1,273 @@
+.dashboardContainer {
+    padding: 0 20px;
+    background: var(--bg);
+    min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.dashboardTitle {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.dashboardTitle::after {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 4px;
+    background-color: var(--accent);
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+.subtitle {
+    color: var(--text);
+    opacity: .8;
+}
+
+/* ===== STATS ===== */
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.statCard {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 1.6rem 1.75rem;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle top glow line */
+.statCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(
+        90deg,
+        var(--primary),
+        var(--accent),
+        var(--secondary)
+    );
+    opacity: 0.9;
+}
+
+/* soft floating glow on hover */
+.statCard::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top right,
+        rgba(104, 133, 87, 0.08),
+        transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.statCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.statCard:hover::after {
+    opacity: 1;
+}
+
+/* LABEL (small uppercase SaaS style) */
+.statLabel {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text);
+    opacity: 0.7;
+    margin-bottom: 0.75rem;
+}
+
+/* VALUE */
+.statNumber {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--text-h);
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+/* optional hint line under number */
+.statHint {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+/* ===== ACTIVITY ===== */
+
+.activitySection {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,.03);
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.sectionHeader h2 {
+    color: var(--text-h);
+    font-size: 1.3rem;
+}
+
+.viewAllLink {
+    font-size: 0.9rem;
+    color: var(--primary);
+    padding: .3rem .6rem;
+    border-radius: 6px;
+    border: 1px solid var(--primary);
+    text-decoration: none;
+    transition: color 0.2s ease, background 0.2s ease, border 0.2s ease;
+}
+
+.viewAllLink:hover {
+    color: white;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+}
+
+/* LIST */
+
+.activityList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.activityItem {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.2s ease;
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+.activityItem:hover {
+    background: #f9f9f9;
+}
+
+.activityItem:last-child {
+    border-bottom: none;
+}
+
+/* DOT */
+
+.activityDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-top: .6rem;
+    flex-shrink: 0;
+}
+
+/* CONTENT */
+
+.activityContent {
+    flex: 1;
+}
+
+/* MAIN TEXT */
+
+.activityText {
+    margin: 0;
+    font-size: .95rem;
+    color: var(--text-h);
+    line-height: 1.5;
+}
+
+.activityMeta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    font-size: .8rem;
+    color: #777;
+    margin-top: .4rem;
+}
+
+.subjectType {
+    background: var(--soft);
+    color: var(--text-h);
+    padding: .2rem .6rem;
+    border-radius: 999px;
+    font-size: .75rem;
+}
+
+.email {
+    font-style: italic;
+}
+
+.time {
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+/* DETAILS */
+
+.activityDetails {
+    margin-top: .75rem;
+}
+
+.activityDetails summary {
+    cursor: pointer;
+    color: var(--primary);
+    font-size: .85rem;
+}
+
+.activityDetails pre {
+    margin-top: .5rem;
+    padding: 1rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: .8rem;
+}
+
+/* STATES */
+
+.error {
+    color: var(--error);
+}
+
+.noStatsData,
+.noRecentActivity {
+    color: var(--text);
+    opacity: .7;
+}

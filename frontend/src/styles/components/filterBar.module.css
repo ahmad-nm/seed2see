@@ -1,0 +1,26 @@
+.filterSelect {
+  padding: 11px 15px;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Outfit', sans-serif;
+  outline: none;
+  background: white;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterSelect:focus {
+  box-shadow: 0 0 0 3px rgba(104, 133, 87, 0.2);
+  border-color: var(--accent);
+}
+
+.filterSelect:hover {
+  border-color: var(--accent);
+}
+
+.filterSelect option {
+  color: var(--text);
+  background: white;
+}

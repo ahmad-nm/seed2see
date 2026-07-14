@@ -1,0 +1,15 @@
+.inputField {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.inputField:focus {
+    box-shadow: 0 0 0 3px rgba(104, 133, 87, 0.2);
+    border-color: var(--accent);
+}

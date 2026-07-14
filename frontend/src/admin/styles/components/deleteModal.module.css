@@ -1,0 +1,81 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.deleteModalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    width: 100%;
+    background-color: white;
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.warningIcon {
+    height: 80px;
+}
+
+.deleteModalTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.deleteModalDescription {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.deleteModalButtons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.deleteButton {
+    flex: 1;
+    background-color: var(--error);
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.deleteButton:hover {
+    background-color: #a3001a;
+}
+
+.cancelButton {
+    flex: 1;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancelButton:hover {
+    background-color: var(--soft);
+}

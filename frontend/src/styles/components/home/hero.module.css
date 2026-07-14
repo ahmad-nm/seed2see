@@ -1,0 +1,163 @@
+.hero {
+    height: 100vh;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: background-image 1s ease-in-out;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    animation: fadeInUp 1s ease-out;
+}
+
+.heroContent h1 {
+    font-size: 54px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 800;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    letter-spacing: -1px;
+}
+
+.heroContent p {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-weight: 300;
+}
+
+.heroContent button {
+    margin-top: 30px;
+    padding: 15px 25px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 16px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 20px rgba(163, 102, 39, 0.3);
+}
+
+.heroContent button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(163, 102, 39, 0.5);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.heroContent button:active {
+    transform: translateY(-1px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dots {
+    position: absolute;
+    bottom: 40px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 12px;
+
+    z-index: 2;
+}
+
+.dot,
+.activeDot {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.dot:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.activeDot {
+    background: white;
+    border-color: white;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* TABLET STYLES */
+@media (max-width: 768px) {
+    .heroContent h1 {
+        font-size: 40px;
+    }
+
+    .heroContent p {
+        font-size: 16px;
+    }
+
+    .heroContent button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+/* MOBILE STYLES */
+@media (max-width: 480px) {
+    .heroContent h1 {
+        font-size: 28px;
+    }
+
+    .heroContent p {
+        font-size: 14px;
+    }
+
+    .heroContent button {
+        padding: 10px 20px;
+        font-size: 13px;
+        margin-top: 20px;
+    }
+
+    .dots {
+        bottom: 20px;
+        gap: 8px;
+    }
+
+    .dot,
+    .activeDot {
+        width: 10px;
+        height: 10px;
+    }
+}

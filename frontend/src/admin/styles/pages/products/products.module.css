@@ -1,0 +1,194 @@
+.productsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+.productsHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productsTitle {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.productsTitle::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: var(--accent);
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+.productCount {
+    font-size: 20px;
+    color: var(--accent);
+    margin-left: 10px;
+}
+
+.createProductButton {
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: fit-content;
+    align-self: flex-end;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.createProductButton:hover {
+    background-color: var(--soft);
+}
+
+.productsList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.productItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding-bottom: 20px;
+    width: 300px;
+    height: 485px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.productImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    margin-bottom: 5px;
+}
+
+.productInfo {
+    padding: 0 20px;
+}
+
+.productName {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.productCategory {
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 5px;
+}
+
+.productDescription {
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.hideDescription {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.showDescription {
+    display: block;
+}
+
+.productPrice {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.productStock {
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 5px;
+}
+
+.productCarbonScore {
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 5px;
+}
+
+.productSustainability {
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 5px;
+}
+
+.productActions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.editButton {
+    padding: 8px 16px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.editButton:hover {
+    background-color: var(--accent-light);
+}
+
+.deleteButton {
+    padding: 8px 16px;
+    background-color: var(--error);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+    background-color: #ff4d4d;
+}
+
+.loadingMessage {
+    font-size: 22px;
+    color: var(--text);
+}

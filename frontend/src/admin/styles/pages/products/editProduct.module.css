@@ -1,0 +1,111 @@
+.editProductContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.editProductTitle {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--primary);
+    position: relative;
+}
+
+.editProductTitle::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    justify-self: center;
+    display: block;
+    width: 130px;
+    height: 4px;
+    background-color: var(--accent);
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+.editProductForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.formRow {
+    display: flex;
+    gap: 10px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formLabel {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.formSpinner {
+    padding: 10px;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.formSpinner:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 5px var(--primary);
+}
+
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.checkboxInput {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primary);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.checkboxInput:hover {
+    box-shadow: 0 0 5px var(--primary);
+}
+
+.submitButton {
+    padding: 12px 20px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: var(--accent);
+}
+
+.errorText {
+    color: var(--error);
+    font-size: 0.9rem;
+    margin-top: 5px;
+    font-weight: bold;
+}

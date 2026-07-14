@@ -1,0 +1,74 @@
+.EditCategoryContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.EditCategoryTitle {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--primary);
+    position: relative;
+}
+
+.EditCategoryTitle::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    justify-self: center;
+    display: block;
+    width: 130px;
+    height: 4px;
+    background-color: var(--accent);
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+.EditCategoryForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.FormGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.FormLabel {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.SubmitButton {
+    padding: 12px 20px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.SubmitButton:hover {
+    background-color: var(--accent);
+}
+
+.ErrorMessage {
+    color: var(--error);
+    font-size: 0.9rem;
+    margin-top: 5px;
+    font-weight: bold;
+}

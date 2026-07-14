@@ -1,0 +1,145 @@
+.WhoWeAre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 60px;
+    gap: 60px;
+    position: relative;
+    background: linear-gradient(135deg, rgba(160, 166, 39, 0.05) 0%, rgba(108, 128, 87, 0.05) 100%);
+    overflow: hidden;
+}
+
+.WhoWeAre::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(113, 135, 63, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.WhoWeAre .imageSection {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.WhoWeAre .imageSection::before {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    border-radius: 24px;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+.WhoWeAre .imageSection .whoWeAreImg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: block;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.WhoWeAre .imageSection:hover .whoWeAreImg {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 35px 70px rgba(104, 133, 87, 0.25);
+}
+
+.WhoWeAre .textSection {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.WhoWeAre .textSection h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    color: var(--text-h);
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.WhoWeAre .textSection h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+    border-radius: 2px;
+}
+
+.WhoWeAre .textSection p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* TABLET STYLES */
+@media (max-width: 768px) {
+    .WhoWeAre {
+        flex-direction: column;
+        padding: 60px 40px;
+        gap: 40px;
+    }
+
+    .WhoWeAre .textSection h2 {
+        font-size: 2.2rem;
+    }
+
+    .WhoWeAre .textSection p {
+        font-size: 1rem;
+    }
+
+    .WhoWeAre .textSection h2::after {
+        left: 0;
+        right: auto;
+    }
+}
+
+/* MOBILE STYLES */
+@media (max-width: 480px) {
+    .WhoWeAre {
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .WhoWeAre .textSection h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .WhoWeAre .textSection p {
+        font-size: 0.95rem;
+    }
+
+    .WhoWeAre::after {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* DARK THEME */
+[data-theme="dark"] .WhoWeAre {
+    background: linear-gradient(135deg, rgba(160, 166, 39, 0.08) 0%, rgba(127, 165, 106, 0.08) 100%);
+}
+
+[data-theme="dark"] .WhoWeAre .imageSection::before {
+    opacity: 0.15;
+}
