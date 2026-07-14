@@ -76,11 +76,25 @@ This workflow was specifically designed to match the client's business process, 
 
 ## 📸 Screenshots
 
-Screenshots are available in:
+## Home Page
+<img src="./screenshots/seed2see.com_.webp" width="300">
 
-```text
-![Home](./screenshots/seed2see.com_)
-```
+## Products Page
+<img src="./screenshots/seed2see.com_products.webp" width="300">
+
+## AboutUs Page
+<img src="./screenshots/seed2see.com_about.webp" width="300">
+
+## Contact Page
+<img src="./screenshots/seed2see.com_contcat.webp" width="300">
+
+## Login Page
+<img src="./screenshots/seed2see.com_login.webp" width="300">
+
+## Register Page
+<img src="./screenshots/seed2see.com_login(1).webp" width="300">
+
+---
 
 Included sections:
 
