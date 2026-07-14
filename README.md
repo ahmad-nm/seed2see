@@ -79,7 +79,7 @@ This workflow was specifically designed to match the client's business process, 
 Screenshots are available in:
 
 ```text
-docs/screenshots/
+![Home](./screenshots/seed2see.com_)
 ```
 
 Included sections:
