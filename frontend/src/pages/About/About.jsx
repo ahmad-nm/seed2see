@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import styles from "../../styles/pages/about.module.css";
+import picture from"../../assets/images/Picture1.jpg";
+import seed1 from "../../assets/images/aboutUsImages/seed1.jpeg";
+import seed2 from "../../assets/images/aboutUsImages/seed2.jpeg";
 
 export default function About() {
     const [email, setEmail] = useState("");
@@ -65,25 +68,43 @@ export default function About() {
             <section className={styles.whoWeAreSection}>
                 <div className={styles.whoWeAreContent}>
                     <div className={styles.whoWeAreText}>
-                        <h2>Who We Are</h2>
+                        <h2>Our Story</h2>
                         <p>
-                            Seed2See is a mission-driven platform dedicated to transforming
-                            agriculture through sustainable practices and community
-                            empowerment. Founded by farmers, for farmers, we understand the
-                            challenges of modern agriculture and the potential of sustainable
-                            solutions.
+                            In 2019 Nadia a local women farmer, makes and sells delicious healthy 
+                            tomato paste from her own garden made from seeds that were passed 
+                            for more than ten years from her mother where she is still cultivating
+                            this kind, and had taught us how to produce and save seeds and 
+                            other local seed and this was our beginning to this precious 
+                            heritage to pass it on.
                         </p>
                         <h3>Our Mission</h3>
                         <p>
-                            To empower farmers and agricultural communities with tools and
-                            knowledge that transform sustainable farming practices into
-                            thriving, profitable businesses while protecting our planet for
-                            future generations.
+                            Maintain the use of heirloom seeds to improve
+                            quality-quantity- and value by empowering farmers 
+                            through seed saving from the best plants to maintain 
+                            true-to-type traits. We’re passionate about co-creating 
+                            the agro -entrepreneurial potential of women and young 
+                            people to deliver results across communities to see the 
+                            change.
+                        </p>
+                        <h3>Our Vision</h3>
+                        <p>
+                            Save and share what we have from seeds, with and agricultural and environmental knowledge to conserve biodiversity through soil health and that retains water and helps plants to grow strong for more native pollinators .
                         </p>
                     </div>
-                    <div className={styles.whoWeAreImage}>
-                        <div className={styles.imagePlaceholder}>🌾</div>
+
+                    <div className={styles.whoWeAreImages}>
+                        <div className={styles.whoWeAreImage}>
+                            <div className={styles.imagePlaceholder}> <img src={picture} alt="Our Story" className={styles.img1} /> </div>
+                        </div>
+                        <div className={styles.whoWeAreImage}>
+                            <div className={styles.imagePlaceholder}> <img src={seed1} alt="Our Story" className={styles.img} /> </div>
+                        </div>
+                        <div className={styles.whoWeAreImage}>
+                            <div className={styles.imagePlaceholder}> <img src={seed2} alt="Our Story" className={styles.img} /> </div>
+                        </div>
                     </div>
+                    
                 </div>
             </section>
 
@@ -102,7 +123,7 @@ export default function About() {
 
             {/* What We Grow and Create */}
             <section className={styles.whatWeGrow}>
-                <h2>What We Grow & Create</h2>
+                <h2>We grow people, not only products.</h2>
                 <div className={styles.growGrid}>
                     <div className={styles.growCard}>
                         <div className={styles.growIcon}>🌱</div>
@@ -144,31 +165,27 @@ export default function About() {
                 <h2>Our Core Values</h2>
                 <div className={styles.valuesGrid}>
                     <div className={styles.valueCard}>
-                        <h4>🌍 Sustainability</h4>
+                        <h4>🌿 Nature-Based Solutions</h4>
                         <p>
-                            Protecting our planet through eco-conscious farming practices and
-                            regenerative solutions.
+                            Promoting sustainable, nature-based solutions that support agricultural health and protect our environment.
                         </p>
                     </div>
                     <div className={styles.valueCard}>
-                        <h4>💡 Innovation</h4>
+                        <h4>🎓 Expertise & Consultation</h4>
                         <p>
-                            Leveraging technology and research to solve real challenges in
-                            agriculture.
+                            Collaborating with experts and providing informed guidance to develop effective, practical agricultural solutions.
                         </p>
                     </div>
                     <div className={styles.valueCard}>
-                        <h4>🤝 Community</h4>
+                        <h4>🤝 Collaboration & Engagement</h4>
                         <p>
-                            Building strong networks that support farmers and agricultural
-                            growth globally.
+                            Engaging our team and farmers in our activities, fostering collaboration, knowledge-sharing, and shared growth.
                         </p>
                     </div>
                     <div className={styles.valueCard}>
-                        <h4>✨ Transparency</h4>
+                        <h4>🌱 Lasting Impact</h4>
                         <p>
-                            Honest communication and ethical practices in all our operations
-                            and partnerships.
+                            Creating meaningful, long-lasting change that empowers farmers and strengthens the future of agriculture.
                         </p>
                     </div>
                 </div>
@@ -240,6 +257,16 @@ export default function About() {
                             bottom line. That's the Seed2See difference."
                         </p>
                     </div>
+                </div>
+            </section>
+
+            {/* Closing Quote */}
+            <section className={styles.quoteSection}>
+                <div className={styles.quoteContent}>
+                    <span className={styles.quoteMark}>“</span>
+                    <blockquote className={styles.quoteText}>
+                        It is useful to know the laws of nature - for that enables us to obey them.  To act otherwise would be to rise in revolt against heaven." -- Adolf Hitler                    </blockquote>
+                    <p className={styles.quoteAuthor}>— Seed2See</p>
                 </div>
             </section>
 

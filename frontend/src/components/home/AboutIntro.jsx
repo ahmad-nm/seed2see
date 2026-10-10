@@ -5,9 +5,9 @@ export default function AboutIntro() {
     return (
         <div className={styles.AboutIntro}>
             <div className={styles.introText}>
-                <h2>About Us</h2>
+                <h2>Seeds are the basics of life sustainability </h2>
                 <p>
-                    We are a team of passionate individuals dedicated to promoting sustainable agriculture and empowering farmers with the tools and knowledge they need to succeed. Our mission is to create a platform that connects farmers with the resources they need to grow healthy crops, improve their yields, and contribute to a more sustainable future. We believe in the power of technology to transform agriculture and are committed to providing innovative solutions that make a positive impact on the farming community and the environment.
+                    Global economic instability has many challenges concerning biodiversity loss and agricultural heritage. Locally seeds or heirloom are precious to our culture and history and has a unique story so could be grown freely and true from year to year.
                 </p>
             </div>
 

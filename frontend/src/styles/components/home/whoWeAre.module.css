@@ -62,7 +62,7 @@
 }
 
 .WhoWeAre .textSection h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 30px;
     letter-spacing: -1px;
@@ -91,6 +91,20 @@
     opacity: 0.9;
 }
 
+.WhoWeAre .textSection .tag {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 6px 18px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(163, 102, 39, 0.2);
+}
+
 /* TABLET STYLES */
 @media (max-width: 768px) {
     .WhoWeAre {
@@ -110,6 +124,10 @@
     .WhoWeAre .textSection h2::after {
         left: 0;
         right: auto;
+    }
+
+    .WhoWeAre .textSection .tag {
+        font-size: 0.75rem;
     }
 }
 
@@ -133,6 +151,11 @@
         width: 250px;
         height: 250px;
     }
+
+    .WhoWeAre .textSection .tag {
+        padding: 5px 14px;
+        margin-bottom: 14px;
+    }
 }
 
 /* DARK THEME */
@@ -142,4 +165,8 @@
 
 [data-theme="dark"] .WhoWeAre .imageSection::before {
     opacity: 0.15;
+}
+
+[data-theme="dark"] .WhoWeAre .textSection .tag {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }

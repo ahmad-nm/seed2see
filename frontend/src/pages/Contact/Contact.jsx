@@ -67,7 +67,9 @@ export default function Contact() {
                     </div>
                     
                     <p className={styles.contactInfoText}> 
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sapiente eum quam! Illum voluptatem ipsa at aperiam, architecto asperiores fugiat reiciendis. Ipsa pariatur ducimus eligendi quisquam sed tempore dolorem porro! 
+                        We love to hear from you! We'd love for you to join us in our journey. 
+                        You have the power to make a difference.
+                        Please contact us if you have questions, comments or suggestions,
                     </p>
 
                     <div className={styles.contactDetailsGrid}>
@@ -88,7 +90,7 @@ export default function Contact() {
 
                         <div className={styles.contactDetail}>
                             <h3 className={styles.contactDetailTitle}>Social Media</h3>
-                            <p className={styles.contactDetailText}>@company</p>
+                            <p className={styles.contactDetailText}>@seed2see</p>
                         </div>
                     </div>
 
@@ -97,9 +99,7 @@ export default function Contact() {
                     <div className={styles.followUsSection}>
                         <h3 className={styles.followUsTitle}>Follow Us</h3>
                         <div className={styles.socialMediaLinks}>
-                            <a href="#" className={styles.socialMediaLink}>Facebook</a>
-                            <a href="#" className={styles.socialMediaLink}>Twitter</a>
-                            <a href="#" className={styles.socialMediaLink}>Instagram</a>
+                            <a href="https://www.instagram.com/seed2see?stkn=eWplajM0eG92YjZk" className={styles.socialMediaLink}>Instagram</a>
                         </div>
                     </div>
                 </div>
@@ -148,21 +148,59 @@ export default function Contact() {
                                 )}
                             </div>
                         </div>
+                        
+                        <div className={styles.contactFormRow}>
+                            <div className={styles.contactFormGroup}>
+                                <label htmlFor="phone" className={styles.contactFormLabel}>Phone *</label>
+                                <Input 
+                                    type="text" 
+                                    id="phone" 
+                                    placeholder="Phone"
+                                    value={formData.phone}
+                                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                    required 
+                                />
+
+                                {errors.phone && 
+                                    <span className={styles.contactFormError}>
+                                        {errors.phone}
+                                    </span>
+                                }
+                            </div>
+                        
+                            <div className={styles.contactFormGroup}>
+                                <label htmlFor="age" className={styles.contactFormLabel}>Age *</label>
+                                <Input 
+                                    type="age" 
+                                    id="age" 
+                                    placeholder="Age"
+                                    value={formData.age}
+                                    onChange={(e) => setFormData({ ...formData, age: e.target.value })}
+                                    required 
+                                />
+
+                                {errors.age && (
+                                    <span className={styles.contactFormError}>
+                                        {errors.age}
+                                    </span>
+                                )}
+                            </div>
+                        </div>
 
                         <div className={styles.contactFormGroup}>
-                            <label htmlFor="subject" className={styles.contactFormLabel}>Subject *</label>
+                            <label htmlFor="scopeofinterest" className={styles.contactFormLabel}>Scope of Interest *</label>
                             <Input 
                                 type="text" 
-                                id="subject" 
-                                placeholder="Subject"
+                                id="scopeofinterest" 
+                                placeholder="Scope of Interest"
                                 value={formData.subject}
                                 onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                                 required 
                             />
 
-                            {errors.subject && (
+                            {errors.scopeofinterest && (
                                 <span className={styles.contactFormError}>
-                                    {errors.subject}
+                                    {errors.scopeofinterest}
                                 </span>
                             )}
                         </div>
@@ -200,11 +238,9 @@ export default function Contact() {
 
             <div className={styles.contactJoinUsSection}>
                 <div className={styles.joinUsContent}>
-                    <h2>Join Our Growing Community</h2>
-                    
+                    <h2>Support Us</h2>
                     <p>
-                        Get exclusive tips, product launches, and farm-to-table stories
-                        delivered to your inbox.
+                        {"Make a Difference — Join us in creating a positive impact. Volunteer With Us Become a Partne Join Us a Farmer Other Ways to Support Us."}
                     </p>
                     
                     <form className={styles.joinEmailForm} onSubmit={handleEmailSubmit}>
