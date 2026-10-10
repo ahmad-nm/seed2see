@@ -259,6 +259,7 @@
     color: var(--text);
     margin-bottom: 40px;
     font-weight: 500;
+    white-space: pre-line; /* This allows the text to respect line breaks */
 }
 
 .joinEmailForm {

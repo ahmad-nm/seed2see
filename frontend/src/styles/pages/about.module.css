@@ -210,6 +210,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 250px;
 }
 
 .imagePlaceholder {
@@ -222,6 +223,27 @@
     justify-content: center;
     font-size: 8rem;
     color: var(--primary);
+}
+
+.whoWeAreImages{
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 20px;
+    justify-items: center;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.img1{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 /* ===== WHAT WE GROW SECTION ===== */
@@ -567,6 +589,58 @@
     margin: 0;
 }
 
+/* ===== CLOSING QUOTE SECTION ===== */
+.quoteSection {
+    position: relative;
+    padding: 100px 60px;
+    background: radial-gradient(
+        circle at center,
+        rgba(148, 186, 96, 0.96) 0%,
+        rgba(126, 161, 82, 0.96) 35%,
+        rgba(104, 133, 87, 1) 68%,
+        rgba(90, 100, 80, 1) 100%
+    );
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.quoteContent {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quoteMark {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 7rem;
+    line-height: 0.6;
+    color: rgba(224, 185, 126, 0.6);
+    margin-bottom: 20px;
+}
+
+.quoteText {
+    margin: 0 0 25px;
+    font-size: 2rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+}
+
+.quoteAuthor {
+    display: inline-block;
+    margin: 0;
+    padding-top: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    border-top: 3px solid rgba(224, 185, 126, 0.7);
+}
+
 /* ===== RESPONSIVE STYLES ===== */
 @media (max-width: 768px) {
     .hero {
@@ -614,6 +688,10 @@
     .emailForm {
         flex-direction: column;
     }
+
+    .quoteSection { padding: 60px 30px; }
+
+    .quoteText { font-size: 1.5rem; }
 }
 
 @media (max-width: 480px) {
@@ -666,6 +744,12 @@
         padding: 12px 20px;
         font-size: 0.85rem;
     }
+
+    .quoteSection { padding: 40px 20px; }
+
+    .quoteText { font-size: 1.2rem; }
+    
+    .quoteMark { font-size: 5rem; }
 }
 
 
@@ -683,4 +767,10 @@
 [data-theme="dark"] .service:hover {
     box-shadow: 0 8px 20px rgba(127, 165, 106, 0.15);
     border-color: var(--primary);
+}
+
+[data-theme="dark"] .hero,
+[data-theme="dark"] .quoteSection,
+[data-theme="dark"] .footer {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
 }

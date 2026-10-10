@@ -6,6 +6,8 @@ import styles from '../../styles/components/home/hero.module.css';
 import hero1 from '../../assets/images/hero/bg7.png';
 import hero2 from '../../assets/images/hero/bg8.jpg';
 import hero3 from '../../assets/images/hero/bg4.jpeg';
+import hero4 from '../../assets/images/hero/bg9.jpeg';
+import seed11 from '../../assets/images/aboutUsImages/seed11.jpeg';
 
 export default function HomeHero() {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -20,19 +22,19 @@ export default function HomeHero() {
 
     const slides = [
         {
-            image: hero1,
-            title: "Growing a greener future",
-            description: "Community-led planting initiative"
+            image: hero4,
+            title: "Seeds are our life & culture",
+            description: "Authentic, Sustainable Seeds – Modern Roots"
         },
         {
-            image: hero2,
-            title: "Sustainable living",
-            description: "Eco-friendly practices for a better tomorrow"
+            image: seed11,
+            title: "Conserve today, to preserve tomorrow",
+            description: "Conserving to future generations"
         },
         {
             image: hero3,
             title: "Protecting our planet",
-            description: "Conservation efforts for future generations"
+            description: "Eco-friendly practices for a better tomorrow"
         }
     ]
 

@@ -9,9 +9,10 @@ export default function WhoWeAre() {
             </div>
 
             <div className={styles.textSection}>
-                <h2>Who We Are</h2>
+                <span className={styles.tag}>Women lead initiative</span>
+                <h2>Authentic Seeds – Modern Roots</h2>
                 <p>
-                    We are a team of passionate individuals dedicated to promoting sustainable agriculture and empowering farmers with the tools and knowledge they need to succeed. Our mission is to create a platform that connects farmers with the resources they need to grow healthy crops, improve their yields, and contribute to a more sustainable future. We believe in the power of technology to transform agriculture and are committed to providing innovative solutions that make a positive impact on the farming community and the environment.
+                    A women lead initiative, passionate to deliver results across communities to see the change, through seed saving and sharing agricultural and environmental knowledge to empower farmers with resilient high quality locally sourced low-cost seeds for a better sustainable agriculture and a community with youth education through traditional practices.
                 </p>
             </div>
         </div>

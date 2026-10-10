@@ -5,7 +5,7 @@ export default function CTA() {
         <section className={styles.CTA}>
             <div className={styles.ctaOverlay}></div>
             <div className={styles.ctaContent}>
-                <h2 className={styles.ctaTitle}>Ready to Grow with Us?</h2>
+                <h2 className={styles.ctaTitle}>JOIN US  to  drive sustainable success</h2>
                 <p className={styles.ctaDescription}>
                     Join thousands of farmers transforming their agricultural practices.
                     Start your journey toward sustainable farming and better yields today.
